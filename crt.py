@@ -11,7 +11,7 @@ TRED = '\033[31m'
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-u", help="target url", dest='target')
-args = parser.parse_args() #arguments to be parsed
+args = parser.parse_args()
 target = args.target
 
 print(TGREEN + '''
