@@ -10,7 +10,7 @@ TWHITE = '\033[37m'
 TRED = '\033[31m'
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-u", help="target url", dest='target')
+parser.add_argument("-t", help="target url", dest='target')
 args = parser.parse_args()
 target = args.target
 
@@ -29,4 +29,4 @@ else:
     response = requests.get('https://crt.sh/?q=' + target + '&output=json')
     json = response.json()
     for show in json:
-        print(TGREEN + "Found: ",TWHITE + show['common_name'])
+        print(TGREEN + "[+] Found: ",TWHITE + show['common_name'])
